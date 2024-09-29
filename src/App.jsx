@@ -15,6 +15,10 @@ import { useDispatch } from 'react-redux';
 import { getUser } from './store/slices/userSlice';
 import "./App.css";
 import { getAllMessages } from './store/slices/messageSlice';
+import { getAllTimeline } from './store/slices/TimelineSlice';
+import { getAllSkills } from './store/slices/skillSlice';
+import { getAllSoftwareApplication } from './store/slices/softwareApplicationSlice';
+import { getAllProjects } from './store/slices/projectSlice';
 
 
 
@@ -24,6 +28,10 @@ const App = () => {
   useEffect(() => {
     dispatch(getUser());
     dispatch(getAllMessages())
+    dispatch(getAllTimeline())
+    dispatch(getAllSkills())
+    dispatch(getAllSoftwareApplication())
+    dispatch(getAllProjects())
   },[]);
   return (
     <Router>
