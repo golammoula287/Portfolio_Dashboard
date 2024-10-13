@@ -8,8 +8,8 @@ const projectSlice = createSlice({
         projects: [],
         loading: false,
         error: null,
-        message: null,
-        singleProject: {}
+        message: null
+       
     },
     reducers: {
         // Get All Projects
@@ -58,6 +58,23 @@ const projectSlice = createSlice({
             state.error = null;
         },
         deleteProjectsFailed(state, action) {
+            state.message = null;
+            state.loading = false;
+            state.error = action.payload;
+        },
+
+        // update Project
+        updateProjectsRequest(state, action) {
+            state.loading = true;
+            state.error = null;
+            state.message = null;
+        },
+        updateProjectsSuccess(state, action) {
+            state.message = action.payload;
+            state.loading = false;
+            state.error = null;
+        },
+        updateProjectsFailed(state, action) {
             state.message = null;
             state.loading = false;
             state.error = action.payload;
@@ -116,6 +133,20 @@ export const deleteProject = (id) => async (dispatch) => {
         dispatch(projectSlice.actions.clearAllErrors());
     } catch (error) {
         dispatch(projectSlice.actions.deleteProjectsFailed(error.response?.data?.message || "Failed to delete project."));
+    }
+};
+
+
+
+// Handle Update Project
+export const updateProject = (id, newData) => async (dispatch) => {
+    dispatch(projectSlice.actions.updateProjectsRequest());
+    try {
+        const { data } = await axios.put(`http://localhost:4000/api/v1/project/update/${id}`,newData, { withCredentials: true , headers:{"content-Type":"multipart"} });
+        dispatch(projectSlice.actions.updateProjectsSuccess(data.message));
+        dispatch(projectSlice.actions.clearAllErrors());
+    } catch (error) {
+        dispatch(projectSlice.actions.updateProjectsFailed(error.response?.data?.message || "Failed to delete project."));
     }
 };
 
