@@ -47,14 +47,14 @@ useEffect(()=>{
           <aside className='fixed inset-y-0 left-0 hidden w-14 flex-col  border-r sm:flex z-50 hover:shadow-lg bg-[#1e1e1e]'>
            <nav className='flex flex-col items-center gap-4 px-2 sm:py-5 '>
          <Link className='group flex h-p w-p shrink-0 items-center justify-center gap-2 rounded-full'>
-         <Package className='h-5 w-5 transition-all group-hover:scale-110'/>
+         <Package className='h-8 w-8 bg-white p-1 rounded-full transition-all  group-hover:scale-110'/>
          <span className='sr-only'> Dashboard </span>
          </Link>
          <TooltipProvider>
   <Tooltip>
     <TooltipTrigger asChild>
       <Link
-        className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Dashboard" ? "text-accent-foreground bg-accent" : "text-muted-foreground"} transition-colors hover:text-foreground md:h-8 md:w-8`}
+        className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Dashboard" ? "text-accent-foreground bg4" : "text-muted-foreground"} transition-colors hover:text-white md:h-8 md:w-8`}
         onClick={() => setActive("Dashboard")}
       >
         <Home className='w-5 h-5' />
@@ -63,7 +63,7 @@ useEffect(()=>{
     </TooltipTrigger>
     <TooltipContent
       side='right'
-      className='relative bg-gray-800 text-white p-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
+      className='relative bg-white text-black p-2 ml-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
     >
       Dashboard
     </TooltipContent>
@@ -76,7 +76,7 @@ useEffect(()=>{
          <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
-                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Project" ? "text-accent-foreground bg-accent" : "text-muted-foreground" } transition-colors hover:text-foreground md:h-8 md:w-8`}
+                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Project" ? "text-accent-foreground bg4" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
                   onClick={() =>setActive("Add Project") }
                   >
                   <FolderGit className=' w-5 h-5'/>
@@ -85,14 +85,14 @@ useEffect(()=>{
                </TooltipTrigger>
                <TooltipContent
       side='right'
-      className='relative bg-gray-800 text-white p-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
+      className='relative bg-white text-black p-2 ml-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
     >Add Project</TooltipContent>
             </Tooltip>
          </TooltipProvider>
          <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
-                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Skill" ? "text-accent-foreground bg-accent" : "text-muted-foreground" } transition-colors hover:text-foreground md:h-8 md:w-8`}
+                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Skill" ? "text-accent-foreground bg4" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
                   onClick={() =>setActive("Add Skill") }
                   >
                   <PencilRuler className=' w-5 h-5'/>
@@ -101,14 +101,14 @@ useEffect(()=>{
                </TooltipTrigger>
                <TooltipContent
       side='right'
-      className='relative bg-gray-800 text-white p-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
+      className='relative bg-white text-black p-2 ml-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
     >Add Skill</TooltipContent>
             </Tooltip>
          </TooltipProvider>
          <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
-                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Application" ? "text-accent-foreground bg-accent" : "text-muted-foreground" } transition-colors hover:text-foreground md:h-8 md:w-8`}
+                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Application" ? "text-accent-foreground bg4" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
                   onClick={() =>setActive("Add Application") }
                   >
                   <LayoutGrid className=' w-5 h-5'/>
@@ -117,14 +117,14 @@ useEffect(()=>{
                </TooltipTrigger>
                <TooltipContent
       side='right'
-      className='relative bg-gray-800 text-white p-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
+      className='relative bg-white text-black p-2 ml-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
     >Add Application</TooltipContent>
             </Tooltip>
          </TooltipProvider>
          <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
-                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Timeline" ? "text-accent-foreground bg-accent" : "text-muted-foreground" } transition-colors hover:text-foreground md:h-8 md:w-8`}
+                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Timeline" ? "text-accent-foreground bg4" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
                   onClick={() =>setActive("Add Timeline") }
                   >
                   <History className=' w-5 h-5'/>
@@ -133,14 +133,14 @@ useEffect(()=>{
                </TooltipTrigger>
                <TooltipContent
       side='right'
-      className='relative bg-gray-800 text-white p-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
+      className='relative bg-white text-black p-2 ml-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
     >Add Timelines</TooltipContent>
             </Tooltip>
          </TooltipProvider>
          <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
-                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Message" ? "text-accent-foreground bg-accent" : "text-muted-foreground" } transition-colors hover:text-foreground md:h-8 md:w-8`}
+                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Message" ? "text-accent-foreground bg4" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
                   onClick={() =>setActive("Message") }
                   >
                   <MessageSquareCodeIcon className=' w-5 h-5'/>
@@ -149,14 +149,14 @@ useEffect(()=>{
                </TooltipTrigger>
                <TooltipContent
       side='right'
-      className='relative bg-gray-800 text-white p-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
+      className='relative bg-white text-black p-2 ml-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
     >Message</TooltipContent>
             </Tooltip>
          </TooltipProvider>
          <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
-                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Account" ? "text-accent-foreground bg-accent" : "text-muted-foreground" } transition-colors hover:text-foreground md:h-8 md:w-8`}
+                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Account" ? "text-accent-foreground bg4" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
                   onClick={() =>setActive("Account") }
                   >
                   <User className=' w-5 h-5'/>
@@ -165,7 +165,7 @@ useEffect(()=>{
                </TooltipTrigger>
                <TooltipContent
       side='right'
-      className='relative bg-gray-800 text-white p-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
+      className='relative bg-white text-black p-2 ml-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
     >Account</TooltipContent>
             </Tooltip>
          </TooltipProvider>
@@ -175,7 +175,7 @@ useEffect(()=>{
            <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
-                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Logout" ? "text-accent-foreground bg-accent" : "text-muted-foreground" } transition-colors hover:text-foreground md:h-8 md:w-8`}
+                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Logout" ? "text-accent-foreground bg4" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
                   onClick={handleLogout}
                   >
                   <LogOut className=' w-5 h-5'/>
@@ -184,7 +184,7 @@ useEffect(()=>{
                </TooltipTrigger>
                <TooltipContent
       side='right'
-      className='relative bg-gray-800 text-white p-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
+      className='relative bg-white text-black p-2 ml-2 rounded shadow-lg transform-gpu transition-all duration-0 ease-in-out opacity-0 translate-x-2 data-[state=delayed-open]:opacity-100 data-[state=delayed-open]:translate-x-0'
     >Logout</TooltipContent>
             </Tooltip>
          </TooltipProvider>

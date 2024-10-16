@@ -32,13 +32,57 @@
 .bg{
    background-color: #000 !important;
 }
-.bg1{
+/* .bg1{
   background-color: #495057 !important;
+} */
+.bg1{
+  background-color: #7a1cac91 !important;
 }
-.bg2{
+/* .bg2{
   background-color: #6c757d !important;
+} */
+.bg2{
+  background-color: #eaeaeaab !important;
 }
-.bg3{
+/* .bg3{
   background-color: #adb5bd !important;
+} */
+.bg3{
+  background-color: #EBD3F8 !important;
+}
+.bg4{
+  background-color: #7a1cac91 !important;
+  color: #000 !important;
+}
+.bg5{
+  background-color: #7a1cacae !important;
+}
+.bg6{
+  background-color: #F3FF90 !important;
+}
+.bg7{
+  background-color: #F3FF90 !important;
 }
 
+.btn{
+  background-color: #000000 !important;
+}
+
+.btn:hover {
+  background-color: #eeeeee !important; /* Darker shade for hover */
+  color: #000  !important;
+}
+.bg3:hover {
+  background-color: #ffffff !important; /* Darker shade for hover */
+}
+
+Input , input{
+  background-color: #EBD3F8 !important;
+}
+Button{
+  background-color: #000000 !important;
+}
+.Button:hover {
+  background-color: #ffffff !important; /* Darker shade for hover */
+  color: #000  !important;
+}

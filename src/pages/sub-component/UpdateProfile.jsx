@@ -87,7 +87,7 @@ const UpdateProfile = () => {
   
   return (
     <>
-      <div className='w-full h-full  bg-[#1e1e1e] p-10 text-white rounded-md'>
+      <div className='w-full h-full  bg5 p-10 text-white rounded-md'>
             <div className='grid w-[100%] gap-6'>
                 <div className='flex grid gap-2 items-center '>
                     <h1  className='text-2xl font-semibold '>Update Profile</h1>
@@ -96,7 +96,7 @@ const UpdateProfile = () => {
                 </div>
             </div>
             <div className='grid gap-4 mt-4 '>
-                <div className='flex items-start lg:justify-between lg:items-center flex-col lg:flex-row gap-5 bg-[#4b4b4b] p-4 rounded-md'>
+                <div className='flex items-start lg:justify-between lg:items-center flex-col lg:flex-row gap-5 bg2 p-4 rounded-md'>
                    <div className='grid gap-2 w-full sm:w-72'>
                       <Label>Profile Image</Label>
                       <img src={avatarPreview ? `${avatarPreview}`:"./avatar.jpg"} alt="avatar" className='w-full h-auto sm:w-72 sm:h-72 rounded-2xl'/>

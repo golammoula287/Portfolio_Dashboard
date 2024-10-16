@@ -69,7 +69,7 @@ const AddSkill = () => {
 
   return (
     <div className="flex justify-center items-center min-h-[100vh] sm:gap-4 sm:py-4 sm:pl-14">
-      <form onSubmit={handleAddNewSkill} className="w-[100vh] px-5 md:w-[650px] bg1 p-8 rounded-md m-5">
+      <form onSubmit={handleAddNewSkill} className="w-[100vh] px-5 md:w-[650px] bg1 p-8 pl-10 pr-10 rounded-md m-5">
         <div className="space-y-12">
           <div className="border-b border-gray-900/10 pb-12">
             <h2 className="font-semibold leading-7 text-[#fff] text-3xl text-center">
@@ -146,7 +146,7 @@ const AddSkill = () => {
         {loading ? (
           <SpecialLoadingButton content={"Adding"} />
         ) : (
-          <Button type="submit" className="w-full bg-[#000]">Add Skill</Button>
+          <Button type="submit" className="w-full btn btn:hover">Add Skill</Button>
         )}
       </form>
     </div>

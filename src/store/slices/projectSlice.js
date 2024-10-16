@@ -150,6 +150,9 @@ export const updateProject = (id, newData) => async (dispatch) => {
     }
 };
 
+
+
+
 // Clear All Errors
 export const clearAllProjectSliceError = () => (dispatch) => {
     dispatch(projectSlice.actions.clearAllErrors());

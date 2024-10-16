@@ -42,31 +42,33 @@ const Dashboard = () => {
       <main className='grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8 lg:grid-cols-2 xl:grid-cols-2'>
         <div className='grid auto-rows-max items-start gap-4 md:gap-8 lg:col-span-2'>
           <div className='grid gap-4 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4'>
-            <Card className="sm:col-span-2">
+            <Card className="sm:col-span-2 bg4 text-black border-0">
               <CardHeader className="p-3">
-                <CardDescription className="max-w-lg text-balance">{user.aboutMe}</CardDescription>
+                <CardDescription className="ax-w-lg text-justify text-[#ffffff] p-5 flex items-center">{user.aboutMe}</CardDescription>
               </CardHeader>
               <CardFooter>
-                <Link to={user.portfolioURL || '#'}>
+                <Link to={user.portfolioURL || '#'}
+                target='_blank'
+                >
                   <Button>Visit Portfolio</Button>
                 </Link>
               </CardFooter>
             </Card>
-            <Card className="flex flex-col justify-center">
+            <Card className="flex flex-col justify-center bg4 border-0">
               <CardHeader className="pb-2">
-                <CardTitle>Project Completed</CardTitle>
-                <CardTitle className="text-6xl">{projects && projects.length}</CardTitle>
+                <CardTitle className=" text-[#ffffff]">Project Completed</CardTitle>
+                <CardTitle className="text-6xl text-[#ffffff]">{projects && projects.length}</CardTitle>
               </CardHeader>
               <CardFooter>
                 <Link to="/manage/projects">
-                  <Button>Manage Projects</Button>
+                  <Button >Manage Projects</Button>
                 </Link>
               </CardFooter>
             </Card>
-            <Card className="flex flex-col justify-center">
+            <Card className="flex flex-col justify-center bg4 border-0">
               <CardHeader className="pb-2">
-                <CardTitle>Skills</CardTitle>
-                <CardTitle className="text-6xl">{skills && skills.length}</CardTitle>
+                <CardTitle  className=" text-[#ffffff]">Skills</CardTitle>
+                <CardTitle className="text-6xl text-[#ffffff] ">{skills && skills.length}</CardTitle>
               </CardHeader>
               <CardFooter>
                 <Link to="/manage/skills">
@@ -77,39 +79,41 @@ const Dashboard = () => {
           </div>
 
           {/* Projects Tab */}
-          <Tabs>
+          <Tabs >
             <TabsContent>
-              <Card>
+              <Card className="bg4 border-0 pb-4">
                 <CardHeader className="px-7">
-                  <CardTitle>Projects</CardTitle>
+                  <CardTitle className=" text-[#ffffff]">Projects</CardTitle>
                 </CardHeader>
-                <CardContent>
-                  <Table>
-                    <TableHeader>
+                <CardContent className="bg2 m-4 rounded-md pt-6">
+                  <Table >
+                    <TableHeader className="bg3">
                       <TableRow>
-                        <TableHead>Title</TableHead>
-                        <TableHead className="hidden md:table-cell">Stack</TableHead>
-                        <TableHead className="hidden md:table-cell">Deployed</TableHead>
-                        <TableHead>Update</TableHead>
-                        <TableHead className="text-right">Visit</TableHead>
+                        <TableHead className="text-[fff]">Title</TableHead>
+                        <TableHead className="hidden md:table-cell text-[000]">Stack</TableHead>
+                        <TableHead className="hidden md:table-cell text-[000]">Deployed</TableHead>
+                        <TableHead className="text-[000]">Update</TableHead>
+                        <TableHead className="text-right text-[000]">Visit</TableHead>
                       </TableRow>
                     </TableHeader>
-                    <TableBody>
+                    <TableBody >
                       {projects && projects.length > 0 ? (
                         projects.map((element) => (
-                          <TableRow className="bg-accent" key={element._id}>
+                          <TableRow className="bg3 bg3:hover" key={element._id}>
                             <TableCell>
                               <div className='font-semibold'>{element.title}</div>
                             </TableCell>
                             <TableCell className="hidden md:table-cell">{element.stack}</TableCell>
                             <TableCell className="hidden md:table-cell">{element.deployed}</TableCell>
                             <TableCell>
-                              <Link to={`/update/project/${element._id}`}>
+                              <Link to={`/update/projects/${element._id}`}>
                                 <Button>Update</Button>
                               </Link>
                             </TableCell>
                             <TableCell className="text-right">
-                              <Link to={element.projectLink || '#'}>
+                              <Link to={element.projectLink || '#'}
+                              target='_blank'
+                              >
                                 <Button>Visit</Button>
                               </Link>
                             </TableCell>
@@ -132,17 +136,17 @@ const Dashboard = () => {
           {/* Skills Tab */}
           <Tabs>
             <TabsContent>
-              <Card>
+              <Card className="bg4 border-0 pb-4">
                 <CardHeader className="px-7 gap-3">
-                  <CardTitle>Skills</CardTitle>
+                  <CardTitle className=" text-[#ffffff]">Skills</CardTitle>
                 </CardHeader>
-                <CardContent className='grid sm:grid-cols-2 gap-4'>
+                <CardContent className='grid sm:grid-cols-2 gap-4 bg2 m-4  p-4 rounded-md '>
                   {skills && skills.length > 0 ? (
                     skills.map((element) => (
-                      <Card key={element._id}>
+                      <Card key={element._id} className="bg3">
                         <CardHeader>{element.title}</CardHeader>
                         <CardFooter>
-                          <Progress value={element.proficiency} />
+                          <Progress  value={element.proficiency} />
                         </CardFooter>
                       </Card>
                     ))
@@ -160,23 +164,23 @@ const Dashboard = () => {
           <Tabs>
             <TabsContent className="grid min-[1050px]:grid-cols-2 gap-4">
               {/* Software Applications */}
-              <Card>
+              <Card className="bg4 border-0">
                 <CardHeader className='px-7'>
-                  <CardTitle>Software Applications</CardTitle>
+                  <CardTitle className=" text-[#ffffff]">Software Applications</CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="bg2 m-4 rounded-md pt-6">
                   <Table>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHead>Name</TableHead>
-                        <TableHead className="md:table-cell">Icon</TableHead>
-                        <TableHead className="md:table-cell">Action</TableHead>
+                    <TableHeader className="bg3">
+                      <TableRow >
+                        <TableHead className="text-[000] ">Name</TableHead>
+                        <TableHead className="md:table-cell text-[000] ">Icon</TableHead>
+                        <TableHead className="md:table-cell text-[000]">Action</TableHead>
                       </TableRow>
                     </TableHeader>
                     <TableBody>
                       {softwareApplications && softwareApplications.length > 0 ? (
                         softwareApplications.map((element) => (
-                          <TableRow className="bg-accent" key={element._id}>
+                          <TableRow className="bg3" key={element._id}>
                             <TableCell>{element.name}</TableCell>
                             <TableCell>
                               {element.svg && element.svg.url ? (
@@ -209,23 +213,23 @@ const Dashboard = () => {
                 </CardContent>
               </Card>
                {/* Timelines */}
-              <Card>
+              <Card className="bg4 border-0">
                 <CardHeader className='px-7 flex items-center justify-between flex-row'>
-                  <CardTitle>Timelines</CardTitle>
+                  <CardTitle className=" text-[#ffffff]">Timelines</CardTitle>
                   <Link to="/manage/timeline">
                     <Button>Manage Timeline</Button>
                   </Link>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="bg2 m-4 rounded-md pt-6" >
                   <Table>
-                    <TableHeader>
-                      <TableRow>
-                        <TableHead>Title</TableHead>
-                        <TableHead>From</TableHead>
-                        <TableHead className="text-right">To</TableHead>
+                    <TableHeader className="bg3">
+                      <TableRow >
+                        <TableHead className="text-[000] ">Title</TableHead>
+                        <TableHead className=" text-[000] ">From</TableHead>
+                        <TableHead className="text-right  text-[000]">To</TableHead>
                       </TableRow>
                     </TableHeader>
-                    <TableBody>
+                    <TableBody >
                       {timeline && timeline.length > 0 ? (
                         timeline.map((element) => {
                           // Debugging log for the timeline array and each element
@@ -234,7 +238,7 @@ const Dashboard = () => {
                           console.log("Timeline to:", element.timeline?.to);
 
                           return (
-                            <TableRow className="bg-accent" key={element._id}>
+                            <TableRow className="bg3" key={element._id}>
                               <TableCell className="font-medium">{element.title}</TableCell>
                               <TableCell className="md:table-cell">{element.timeline?.from}</TableCell>
                               <TableCell className="md:table-cell text-right">{element.timeline?.to ? `${element.timeline?.to}` : "Present"}</TableCell>
