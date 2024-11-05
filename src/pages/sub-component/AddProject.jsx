@@ -152,9 +152,9 @@ const AddProject = () => {
 
               {/* Stack */}
               <div className="w-full sm:col-span-4">
-                <Label className="block text-sm font-medium leading-6 text-[#fff]">Stack</Label>
+                <Label className="block text-sm font-medium leading-6 text-[#fff] ">Stack</Label>
                 <div className="mt-2">
-                  <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-[#fff] focus-within:ring-2 focus-within:ring-indigo-600">
+                  <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-[#fff] focus-within:ring-2 focus-within:ring-indigo-600 ">
                     <Select value={stack} onValueChange={(selectedValue)=>setStack(selectedValue)}>
                        <SelectTrigger>
                           <SelectValue placeholder="Select Project Stack"></SelectValue>
@@ -183,10 +183,10 @@ const AddProject = () => {
               </div>
 
               {/* Deployed */}
-              <div className="w-full sm:col-span-4">
+              <div className="w-full sm:col-span-4 ">
                 <Label className="block text-sm font-medium leading-6 text-[#fff]">Deployed Status</Label>
-                <div className="mt-2">
-                  <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-[#fff] focus-within:ring-2 focus-within:ring-indigo-600">
+                <div className="mt-2 ">
+                  <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-[#fff] focus-within:ring-2 focus-within:ring-indigo-600 bg3">
                     <Select value={deployed} onValueChange={(selectedValue)=>setDeployed(selectedValue)}>
                        <SelectTrigger>
                           <SelectValue placeholder="Select Deployed Status"></SelectValue>

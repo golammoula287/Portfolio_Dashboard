@@ -48,7 +48,7 @@ const ManageTimeline = () => {
       <CardHeader className="flex gap-4 sm:justify-between sm:flex-row sm:item-center">
         <CardTitle>Manage Your Timeline</CardTitle>
         <Link to="/">
-          <Button>Return To Dashboard</Button>
+          <Button className="btn">Return To Dashboard</Button>
         </Link>
       </CardHeader>
       <CardContent className="grid grid-cols-1 gap-4">

@@ -72,7 +72,7 @@ const ManageSkills = () => {
             <CardHeader className="flex gap-4 sm:justify-between sm:flex-row sm:items-center">
               <CardTitle>Manage Your Skills</CardTitle>
               <Link to="/">
-                <Button className="w-fit">Return To Dashboard</Button>
+                <Button className="w-fit btn">Return To Dashboard</Button>
               </Link>
             </CardHeader>
             <CardContent className="grid sm:grid-cols-2 gap-4">

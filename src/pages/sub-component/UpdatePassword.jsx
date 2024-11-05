@@ -38,7 +38,7 @@ useEffect(() => {
 
   return (
     <>
-      <div className='w-full h-full bg-[#1e1e1e] p-10 text-white rounded-md'>
+      <div className='w-full h-full bg1 p-10 text-white rounded-md'>
             <div className='grid w-[100%] gap-6'>
                 <div className='flex grid gap-2 items-center '>
                     <h1  className='text-2xl font-semibold '>Update Password</h1>
@@ -51,7 +51,7 @@ useEffect(() => {
                   <div className='grid gap-2'>
                         <Label>Current Password</Label>
                         <Input 
-                        className="bg-[#4b4b4b] border-0"
+                        className="bg3 border-0"
                         type="text"
                         placeholder="Current Password" 
                         value={currentPassword}
@@ -61,7 +61,7 @@ useEffect(() => {
                   <div className='grid gap-2'>
                         <Label>New Password</Label>
                         <Input 
-                        className="bg-[#4b4b4b] border-0"
+                        className="bg3 border-0"
                         type="text"
                         placeholder="New Password" 
                         value={newPassword}
@@ -71,7 +71,7 @@ useEffect(() => {
                   <div className='grid gap-2'>
                         <Label>Confirm New Password</Label>
                         <Input 
-                        className="bg-[#4b4b4b] border-0"
+                        className="bg3 border-0"
                         type="text"
                         placeholder="Confirm New Password" 
                         value={confirmNewPassword}
@@ -81,7 +81,7 @@ useEffect(() => {
                   
                   <div className='grid gap-2'>
                        {
-                        !loading ? <Button onClick ={handleUpdatePassword} className="w-full w-full bg-[#b7b7b7] text-black hover:bg-[#e8e8e8] hover:text-[#525252] ">Update Password</Button> : <SpecialLoadingButton content={"Updating"}/>
+                        !loading ? <Button onClick ={handleUpdatePassword} className="w-full w-full bg-[#b7b7b7] text-black btn btn:hover ">Update Password</Button> : <SpecialLoadingButton content={"Updating"}/>
                        }
                   </div>
             </div>

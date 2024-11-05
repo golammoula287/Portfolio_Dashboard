@@ -136,7 +136,7 @@ const Message = () => {
               <CardContent className="grid sm:grid-cols-2 gap-4 ">
                 {messages && messages.length > 0 ? (
                   messages.map(element => (
-                    <Card key={element._id} className="grid gap-2 p-4 bg3">
+                    <Card key={element._id} className="grid gap-2 p-4 mbg">
                       <CardTitle>{element.senderName}</CardTitle>
                       <CardDescription className="text-slate-950">
                         <span className='font-bold mr-2'>Sender Email</span>
@@ -159,12 +159,12 @@ const Message = () => {
                         {loading && (messageId === element._id) ? (
                           <SpecialLoadingButton width={32} content={"Deleting"} />
                         ) : (
-                          <Button className="w-32" onClick={() => handleMessageDelete(element._id)}>Delete</Button>
+                          <Button className="w-32 btn" onClick={() => handleMessageDelete(element._id)}>Delete</Button>
                         )}
                       </CardFooter>
                     </Card>
                   ))
-                ) : <CardHeader>No Messages Found!</CardHeader>}
+                ) : <CardHeader className="text-white">No Messages Found!</CardHeader>}
               </CardContent>
             </Card>
           </TabsContent>

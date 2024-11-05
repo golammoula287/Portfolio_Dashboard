@@ -54,7 +54,7 @@ useEffect(()=>{
   <Tooltip>
     <TooltipTrigger asChild>
       <Link
-        className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Dashboard" ? "text-accent-foreground bg4" : "text-muted-foreground"} transition-colors hover:text-white md:h-8 md:w-8`}
+        className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Dashboard" ? "bg7" : "text-muted-foreground"} transition-colors hover:text-white md:h-8 md:w-8`}
         onClick={() => setActive("Dashboard")}
       >
         <Home className='w-5 h-5' />
@@ -76,7 +76,7 @@ useEffect(()=>{
          <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
-                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Project" ? "text-accent-foreground bg4" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
+                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Project" ? "text-accent-foreground bg7" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
                   onClick={() =>setActive("Add Project") }
                   >
                   <FolderGit className=' w-5 h-5'/>
@@ -92,7 +92,7 @@ useEffect(()=>{
          <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
-                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Skill" ? "text-accent-foreground bg4" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
+                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Skill" ? "text-accent-foreground bg7" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
                   onClick={() =>setActive("Add Skill") }
                   >
                   <PencilRuler className=' w-5 h-5'/>
@@ -108,7 +108,7 @@ useEffect(()=>{
          <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
-                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Application" ? "text-accent-foreground bg4" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
+                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Application" ? "text-accent-foreground bg7" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
                   onClick={() =>setActive("Add Application") }
                   >
                   <LayoutGrid className=' w-5 h-5'/>
@@ -124,7 +124,7 @@ useEffect(()=>{
          <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
-                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Timeline" ? "text-accent-foreground bg4" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
+                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Add Timeline" ? "text-accent-foreground bg7" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
                   onClick={() =>setActive("Add Timeline") }
                   >
                   <History className=' w-5 h-5'/>
@@ -140,7 +140,7 @@ useEffect(()=>{
          <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
-                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Message" ? "text-accent-foreground bg4" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
+                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Message" ? "text-accent-foreground bg7" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
                   onClick={() =>setActive("Message") }
                   >
                   <MessageSquareCodeIcon className=' w-5 h-5'/>
@@ -156,7 +156,7 @@ useEffect(()=>{
          <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
-                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Account" ? "text-accent-foreground bg4" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
+                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Account" ? "text-accent-foreground bg7" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
                   onClick={() =>setActive("Account") }
                   >
                   <User className=' w-5 h-5'/>
@@ -175,7 +175,7 @@ useEffect(()=>{
            <TooltipProvider>
             <Tooltip>
                <TooltipTrigger asChild>
-                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Logout" ? "text-accent-foreground bg4" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
+                  <Link className={`flex h-9 w-9 items-center justify-center rounded-lg ${active === "Logout" ? "text-accent-foreground bg7" : "text-muted-foreground" } transition-colors hover:text-white md:h-8 md:w-8`}
                   onClick={handleLogout}
                   >
                   <LogOut className=' w-5 h-5'/>

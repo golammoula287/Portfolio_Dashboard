@@ -99,12 +99,12 @@ const UpdateProfile = () => {
                 <div className='flex items-start lg:justify-between lg:items-center flex-col lg:flex-row gap-5 bg2 p-4 rounded-md'>
                    <div className='grid gap-2 w-full sm:w-72'>
                       <Label>Profile Image</Label>
-                      <img src={avatarPreview ? `${avatarPreview}`:"./avatar.jpg"} alt="avatar" className='w-full h-auto sm:w-72 sm:h-72 rounded-2xl'/>
+                      <img src={avatarPreview ? `${avatarPreview}`:"./avatar.jpg"} alt="avatar" className='w-full h-auto sm:w-72 sm:h-72 '/>
                      <div className="relative">
                      <input 
                         type="file" 
                         onChange={avatarHandler} 
-                        className="avatar-update-btn" 
+                        className="avatar-update-btn " 
                          />
                      </div>
 
@@ -113,7 +113,7 @@ const UpdateProfile = () => {
                    <div className='grid gap-2 w-full sm:w-72'>
                       <Label>Resume</Label>
                   
-                      <img src={resumePreview ? `${resumePreview}`:"./resume.jpg"} alt="resume" className='w-full h-auto sm:w-72 sm:h-72 rounded-2xl'/>
+                      <img src={resumePreview ? `${resumePreview}`:"./resume.jpg"} alt="resume" className='w-full h-auto sm:w-72 sm:h-72 '/>
                   
                       
                       <div className="relative">
@@ -127,47 +127,47 @@ const UpdateProfile = () => {
                 </div>
                   <div className='grid gap-2 '>
                         <Label>Full Name</Label>
-                        <Input className="bg-[#4b4b4b] border-0" type="text" placeholder="Your Full Name" value={fullName} onChange={(e)=> setFullName(e.target.value)} />
+                        <Input className="bg2 border-0 text-black" type="text" placeholder="Your Full Name" value={fullName} onChange={(e)=> setFullName(e.target.value)} />
                   </div>
                   <div className='grid gap-2'>
                         <Label>Email</Label>
-                        <Input className="bg-[#4b4b4b] border-0" type="email" placeholder="Your Email" value={email} onChange={(e)=> setEmail(e.target.value)} />
+                        <Input className="bg2 border-0 text-black" type="email" placeholder="Your Email" value={email} onChange={(e)=> setEmail(e.target.value)} />
                   </div>
                   <div className='grid gap-2'>
                         <Label>phone</Label>
-                        <Input className="bg-[#4b4b4b] border-0" type="phone" placeholder="Your Phone Number" value={phone} onChange={(e)=> setPhone(e.target.value)} />
+                        <Input className="bg2 border-0 text-black" type="phone" placeholder="Your Phone Number" value={phone} onChange={(e)=> setPhone(e.target.value)} />
                   </div>
                   <div className='grid gap-2'>
                         <Label>About Me</Label>
-                        <Textarea className="bg-[#4b4b4b] border-0" placeholder="Write About Yourself" value={aboutMe} onChange={(e)=> setAboutMe(e.target.value)} />
+                        <Textarea className="bg2 border-0 text-black" placeholder="Write About Yourself" value={aboutMe} onChange={(e)=> setAboutMe(e.target.value)} />
                   </div>
                   <div className='grid gap-2'>
                         <Label>Portfolio URL</Label>
-                        <Input className="bg-[#4b4b4b] border-0" type="portfolioURL"  placeholder="Your Portfolio URL" value={portfolioURL} onChange={(e)=> setPortfolioURL(e.target.value)}/>
+                        <Input className="bg2 border-0 text-black" type="portfolioURL"  placeholder="Your Portfolio URL" value={portfolioURL} onChange={(e)=> setPortfolioURL(e.target.value)}/>
                   </div>
                   <div className='grid gap-2'>
                         <Label>LinkedIn URL</Label>
-                        <Input className="bg-[#4b4b4b] border-0" type="linkedInURL"  placeholder="Your LinkedIn URL" value={linkedInURL} onChange={(e)=> setLinkedInURL(e.target.value)} />
+                        <Input className="bg2 border-0 text-black" type="linkedInURL"  placeholder="Your LinkedIn URL" value={linkedInURL} onChange={(e)=> setLinkedInURL(e.target.value)} />
                   </div>
                   <div className='grid gap-2'>
                         <Label>Instagram URL</Label>
-                        <Input className="bg-[#4b4b4b] border-0" type="instagramURL"  placeholder="Your Instagram URL" value={instagramURL} onChange={(e)=> SetInstagramURL(e.target.value)} />
+                        <Input className="bg2 border-0 text-black" type="instagramURL"  placeholder="Your Instagram URL" value={instagramURL} onChange={(e)=> SetInstagramURL(e.target.value)} />
                   </div>
                   <div className='grid gap-2'>
                         <Label>Facebook URL</Label>
-                        <Input className="bg-[#4b4b4b] border-0" type="facebookURL" placeholder="Your Facebook URL" value={facebookURL} onChange={(e)=> steFacebookURL(e.target.value)}/>
+                        <Input className="bg2 border-0 text-black" type="facebookURL" placeholder="Your Facebook URL" value={facebookURL} onChange={(e)=> steFacebookURL(e.target.value)}/>
                   </div>
                   <div className='grid gap-2'>
                         <Label>Github URL</Label>
-                        <Input className="bg-[#4b4b4b] border-0" type="githubURL" placeholder="Your Github URL" value={githubURL} onChange={(e)=> setGithubURL(e.target.value)} />
+                        <Input className="bg2 border-0 text-black" type="githubURL" placeholder="Your Github URL" value={githubURL} onChange={(e)=> setGithubURL(e.target.value)} />
                   </div>
                   <div className='grid gap-2'>
                         <Label>Twitter URL</Label>
-                        <Input className="bg-[#4b4b4b] border-0" type="twitterURL" placeholder="Your Twitter URL" value={twitterURL} onChange={(e)=> setTwitterURL(e.target.value)} />
+                        <Input className="bg2 border-0 text-black" type="twitterURL" placeholder="Your Twitter URL" value={twitterURL} onChange={(e)=> setTwitterURL(e.target.value)} />
                   </div>
                   <div className='grid gap-2'>
                        {
-                        !loading ? <Button onClick ={handleUpdateProfile} className="w-full w-full bg-[#b7b7b7] text-black hover:bg-[#e8e8e8] hover:text-[#525252] ">Update Profile</Button> : <SpecialLoadingButton content={"Updating"}/>
+                        !loading ? <Button onClick ={handleUpdateProfile} className="w-full w-full bg-[#b7b7b7] text-black btn btn:hover">Update Profile</Button> : <SpecialLoadingButton content={"Updating"}/>
                        }
                   </div>
             </div>

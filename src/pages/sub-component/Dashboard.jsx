@@ -50,7 +50,7 @@ const Dashboard = () => {
                 <Link to={user.portfolioURL || '#'}
                 target='_blank'
                 >
-                  <Button>Visit Portfolio</Button>
+                  <Button className="btn btn:hover">Visit Portfolio</Button>
                 </Link>
               </CardFooter>
             </Card>
@@ -61,7 +61,7 @@ const Dashboard = () => {
               </CardHeader>
               <CardFooter>
                 <Link to="/manage/projects">
-                  <Button >Manage Projects</Button>
+                  <Button className="btn btn:hover">Manage Projects</Button>
                 </Link>
               </CardFooter>
             </Card>
@@ -72,7 +72,7 @@ const Dashboard = () => {
               </CardHeader>
               <CardFooter>
                 <Link to="/manage/skills">
-                  <Button>Manage Skills</Button>
+                  <Button className="btn btn:hover">Manage Skills</Button>
                 </Link>
               </CardFooter>
             </Card>
@@ -107,14 +107,14 @@ const Dashboard = () => {
                             <TableCell className="hidden md:table-cell">{element.deployed}</TableCell>
                             <TableCell>
                               <Link to={`/update/projects/${element._id}`}>
-                                <Button>Update</Button>
+                                <Button className="btn btn:hover">Update</Button>
                               </Link>
                             </TableCell>
                             <TableCell className="text-right">
                               <Link to={element.projectLink || '#'}
                               target='_blank'
                               >
-                                <Button>Visit</Button>
+                                <Button className="btn btn:hover">Visit</Button>
                               </Link>
                             </TableCell>
                           </TableRow>
@@ -194,7 +194,7 @@ const Dashboard = () => {
                                   loading && appId === element._id ? (
                                     <SpecialLoadingButton content={"Deleting"} width={"w-fit"}/>
                                   ) : (
-                                    <Button onClick={() => handleDeleteSoftwareApp(element._id)}> Delete </Button>
+                                    <Button className="btn btn:hover" onClick={() => handleDeleteSoftwareApp(element._id)}> Delete </Button>
                                   )
                                 }
                               </TableCell>
@@ -217,7 +217,7 @@ const Dashboard = () => {
                 <CardHeader className='px-7 flex items-center justify-between flex-row'>
                   <CardTitle className=" text-[#ffffff]">Timelines</CardTitle>
                   <Link to="/manage/timeline">
-                    <Button>Manage Timeline</Button>
+                    <Button className="btn btn:hover">Manage Timeline</Button>
                   </Link>
                 </CardHeader>
                 <CardContent className="bg2 m-4 rounded-md pt-6" >
